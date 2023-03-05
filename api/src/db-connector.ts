@@ -1,7 +1,7 @@
 import { PostgresConnector, SQLite3Connector } from "https://raw.githubusercontent.com/jerlam06/denodb/master/mod.ts";
 
 export const connector = new PostgresConnector({
-	host: 'localhost',
+	host: 'db',
 	username: 'hoteladmin',
 	password: 'hotelpwd',
 	database: 'hotel'

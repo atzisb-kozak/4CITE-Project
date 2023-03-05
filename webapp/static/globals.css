@@ -1,0 +1,8 @@
+a,
+p,
+input,
+select,
+label,
+span {
+  transform: rotate(0.05deg);
+}
