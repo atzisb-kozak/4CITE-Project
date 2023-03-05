@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  db:
+    image: postgres:14.5-alpine
+    container_name: hotel_db
+    environment:
+      - POSTGRES_PASSWORD=hotelpwd
+      - POSTGRES_USER=hoteladmin
+      - POSTGRES_DB=hotel
+  api:
+    image: hotel-api:0.1
+    build: 
+      context: api/.
+      dockerfile: Dockerfile
+    container_name: hotel_api
+    ports:
+      - 8080:3000
+    depends_on:
+      - db
+  front: 
+    image: hotel-front:0.1
+    build: 
+      context: webapp/.
+      dockerfile: Dockerfile
+    container_name: hotel_front
+    ports:
+      - 80:8000
+    depends_on:
+      - db
+      - api
