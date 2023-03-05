@@ -1,4 +1,4 @@
-import * as mod from "https://deno.land/std@0.178.0/datetime/mod.ts";
+import * as _mod from "https://deno.land/std@0.178.0/datetime/mod.ts";
 import { create, getNumericDate } from "https://deno.land/x/djwt@v2.8/mod.ts";
 import { Application } from "https://deno.land/x/oak@v11.1.0/application.ts";
 import { superoak } from "https://deno.land/x/superoak@4.7.0/mod.ts";
