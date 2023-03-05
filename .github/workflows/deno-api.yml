@@ -49,3 +49,6 @@ jobs:
         
       - name: Run bookings tests
         run: deno test -A --no-check api/test/booking.test.ts 
+        
+      - name: Deploy app
+        run : echo 'Deploy app'
