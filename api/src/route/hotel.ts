@@ -8,7 +8,6 @@ hotelRouter.get('/hotels/:limit', async (ctx) => {
 	try {
 		const param = ctx.params.limit
 		const hotel = await Hotel.select().limit(parseInt(param)).get();
-		console.log(hotel)
 		if (hotel.length === 0) {
 			ctx.response.status = 404
 			ctx.response.body = 'Not Found Hotel'
