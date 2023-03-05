@@ -1,5 +1,5 @@
 import { CardDetail } from "@interfaces/card.ts";
-import { ImasparqlResponse } from "@interfaces/imasparql.ts";
+import { HotelResponse } from "@interfaces/hotel.ts";
 
 const endpointUrl = "http://localhost:3000/hotels/limit";
 
@@ -18,7 +18,7 @@ export async function fetchCardDetails(): Promise<CardDetail[] | undefined> {
 
     clearTimeout(id);
 
-    const json: ImasparqlResponse = await res.json();
+    const json: HotelResponse = await res.json();
     return json;
   } catch (err) {
     console.error(err);

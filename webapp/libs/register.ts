@@ -1,15 +1,7 @@
-import { CardDetail } from "@interfaces/card.ts";
-import { ImasparqlResponse } from "@interfaces/imasparql.ts";
+const endpointUrl = "http://api:3000/auth/register";
 
-const endpointUrl = "http://localhost:3000/hotels/limit";
-
-/**
- * カードに表示するデータをimasparqlから取得
- * @returns データの配列
- */
-export async function register(): Promise<CardDetail[] | undefined> {
+export async function register(): Promise<any> {
 	const url = new URL(endpointUrl);
-	url.searchParams.append("limit", "2");
 
 	const ctrl = new AbortController();
 	const id = setTimeout(() => ctrl.abort(), 5000);

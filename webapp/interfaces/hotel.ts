@@ -8,7 +8,7 @@ export interface Binding {
 	label?: Value;
 }
 
-export interface ImasparqlResponse {
+export interface HotelResponse {
 	results: {
 		bindings: Binding[];
 	};
