@@ -39,13 +39,13 @@ jobs:
         run: deno lint api/
 
       - name: Run auth test
-        run: deno test -A --no-check api/test/auth.test.login 
+        run: deno test -A --no-check api/test/auth.test.ts 
         
       - name: Run users tests
-        run: deno test -A --no-check api/test/user.test.login 
+        run: deno test -A --no-check api/test/user.test.ts 
         
       - name: Run hotels test
-        run: deno test -A --no-check api/test/hotel.test.login 
+        run: deno test -A --no-check api/test/hotel.test.ts 
         
       - name: Run bookings tests
-        run: deno test -A --no-check api/test/booking.test.login 
+        run: deno test -A --no-check api/test/booking.test.ts 
